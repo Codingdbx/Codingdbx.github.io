@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>dongbixi&#39;blog</title>
   
-  <subtitle>Technology changes the world ！</subtitle>
+  
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-12-16T03:44:32.280Z</updated>
+  <updated>2018-12-16T07:10:25.805Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/%E5%89%8D%E7%AB%AF/about-me/"/>
     <id>http://yoursite.com/前端/about-me/</id>
     <published>2018-12-16T04:33:44.000Z</published>
-    <updated>2018-12-16T03:44:32.280Z</updated>
+    <updated>2018-12-16T07:10:25.805Z</updated>
     
     <summary type="html">
     
