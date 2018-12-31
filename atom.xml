@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>dongbixi&#39;blog</title>
   
-  <subtitle>做一个优秀的普通人</subtitle>
+  <subtitle>分享技术与生活</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-12-16T07:10:25.805Z</updated>
+  <updated>2018-12-31T11:41:54.382Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用Hexo+GitHup搭建个人博客</title>
+    <link href="http://yoursite.com/Hexo/myblog01/"/>
+    <id>http://yoursite.com/Hexo/myblog01/</id>
+    <published>2018-12-31T09:48:48.000Z</published>
+    <updated>2018-12-31T11:41:54.382Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;其实一直以来都有个想法，就是写个自己的博客网站，用来记录一些平时累积的技术和生活中的零碎想法。偶然间发现了一个好用的博客生成插件–Hexo。
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://yoursite.com/categories/Hexo/"/>
+    
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>我的阅历</title>

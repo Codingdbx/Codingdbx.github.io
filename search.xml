@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[使用Hexo+GitHup搭建个人博客]]></title>
+    <url>%2FHexo%2Fmyblog01%2F</url>
+    <content type="text"><![CDATA[前言其实一直以来都有个想法，就是写个自己的博客网站，用来记录一些平时累积的技术和生活中的零碎想法。偶然间发现了一个好用的博客生成插件–Hexo。官网地址：https://hexo.io/zh-cn/本站所使用Next主题：https://github.com/theme-next 安装步骤参见 https://www.cnblogs.com/fengxiongZz/p/7707219.html 主题优化参见 http://theme-next.iissnan.com/参见 https://www.jianshu.com/p/f054333ac9e6 网上已经有很多很详细的安装使用教程了，所以本文就不在另起炉灶（就算再写也不一定有上面的博主写的好 →_→ ）。这里只提一下注意事项： 安装git客户端时，选第二或者第三个选项。 与GitHub关联时注意项目名与注册的GitHub账户名称要一样 最后一个坑，真的是太坑了。如果出现输入 hexo d -g 没反应。原因：没加空格]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[我的阅历]]></title>
     <url>%2F%E5%89%8D%E7%AB%AF%2Fabout-me%2F</url>
     <content type="text"><![CDATA[关于我一个被java耽误的文艺青年。。 email: ahutdbx@163.com wechat:124533215]]></content>
