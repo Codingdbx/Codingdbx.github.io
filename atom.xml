@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-12-31T11:41:54.382Z</updated>
+  <updated>2018-12-31T15:11:15.684Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>写在新年</title>
+    <link href="http://yoursite.com/%E7%94%9F%E6%B4%BB/2019-new-year/"/>
+    <id>http://yoursite.com/生活/2019-new-year/</id>
+    <published>2018-12-31T13:37:55.000Z</published>
+    <updated>2018-12-31T15:11:15.684Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天是2018年最后一天的日子。下午和老同学一起吃了个火锅，准备逛逛街。然后发生了一件很尴尬的事情，就是我们走着走着不知道去逛什么了X﹏X。街上人很多，天气还蛮冷的。却没有我们的去处(° ?°)~@。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="生活" scheme="http://yoursite.com/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="新年" scheme="http://yoursite.com/tags/%E6%96%B0%E5%B9%B4/"/>
+    
+      <category term="2019" scheme="http://yoursite.com/tags/2019/"/>
+    
+  </entry>
+  
+  <entry>
     <title>使用Hexo+GitHup搭建个人博客</title>
-    <link href="http://yoursite.com/Hexo/myblog01/"/>
-    <id>http://yoursite.com/Hexo/myblog01/</id>
+    <link href="http://yoursite.com/Hexo/2019-hexo/"/>
+    <id>http://yoursite.com/Hexo/2019-hexo/</id>
     <published>2018-12-31T09:48:48.000Z</published>
-    <updated>2018-12-31T11:41:54.382Z</updated>
+    <updated>2018-12-31T13:44:19.361Z</updated>
     
     <summary type="html">
     
@@ -41,7 +63,7 @@
     <link href="http://yoursite.com/%E5%89%8D%E7%AB%AF/about-me/"/>
     <id>http://yoursite.com/前端/about-me/</id>
     <published>2018-12-16T04:33:44.000Z</published>
-    <updated>2018-12-16T07:10:25.805Z</updated>
+    <updated>2018-12-31T13:44:40.931Z</updated>
     
     <summary type="html">
     
@@ -56,8 +78,6 @@
       <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="标签1" scheme="http://yoursite.com/tags/%E6%A0%87%E7%AD%BE1/"/>
-    
   </entry>
   
   <entry>
@@ -65,7 +85,7 @@
     <link href="http://yoursite.com/%E5%89%8D%E7%AB%AF2/hello-world/"/>
     <id>http://yoursite.com/前端2/hello-world/</id>
     <published>2018-01-15T23:33:44.000Z</published>
-    <updated>2018-12-27T14:56:23.715Z</updated>
+    <updated>2018-12-31T13:43:16.516Z</updated>
     
     <summary type="html">
     
@@ -76,8 +96,6 @@
     
       <category term="前端2" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF2/"/>
     
-    
-      <category term="标签2" scheme="http://yoursite.com/tags/%E6%A0%87%E7%AD%BE2/"/>
     
   </entry>
   
