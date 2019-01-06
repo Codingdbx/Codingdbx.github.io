@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-01T10:25:29.272Z</updated>
+  <updated>2019-01-06T11:42:05.529Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,15 +17,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>java创建线程的方式</title>
+    <link href="http://yoursite.com/%E5%A4%9A%E7%BA%BF%E7%A8%8B/2019-multithread/"/>
+    <id>http://yoursite.com/多线程/2019-multithread/</id>
+    <published>2019-01-06T11:30:48.000Z</published>
+    <updated>2019-01-06T11:42:05.529Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Java创建线程的方法有如下3种。&lt;/p&gt;
+&lt;p&gt;1）继承Thread类创建线程 extends Thread&lt;br&gt;2）实现Runnable接口创建线程 implements Runnable&lt;br&gt;3）实现Callable接口和Future创建线程 implements Callable&lt;v&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="多线程" scheme="http://yoursite.com/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+    
+      <category term="多线程" scheme="http://yoursite.com/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
     <title>写在新年</title>
     <link href="http://yoursite.com/%E7%94%9F%E6%B4%BB/2019-new-year/"/>
     <id>http://yoursite.com/生活/2019-new-year/</id>
     <published>2018-12-31T13:37:55.000Z</published>
-    <updated>2019-01-01T10:25:29.272Z</updated>
+    <updated>2019-01-06T12:12:16.382Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;今天是2018年最后一天的日子。下午和老同学一起吃了个火锅，很舒服~&lt;br&gt;毕竟冬天与火锅更配哦！
+      &lt;p&gt;今天是2018年最后一天的日子。下午和老同学一起吃了个火锅，很舒服~。毕竟冬天与火锅更配哦！吃完饭看着外滩的人山人海，我们一致决定回去休息，就不凑这个热闹了，哈哈。。
     
     </summary>
     
@@ -43,11 +64,11 @@
     <link href="http://yoursite.com/Hexo/2019-hexo/"/>
     <id>http://yoursite.com/Hexo/2019-hexo/</id>
     <published>2018-12-31T09:48:48.000Z</published>
-    <updated>2018-12-31T13:44:19.361Z</updated>
+    <updated>2019-01-06T11:42:32.684Z</updated>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;其实一直以来都有个想法，就是写个自己的博客网站，用来记录一些平时累积的技术和生活中的零碎想法。偶然间发现了一个好用的博客生成插件–Hexo。
+      &lt;p&gt;其实一直以来都有个想法，就是写个自己的博客网站，用来记录一些平时累积的技术和生活中的零碎想法。偶然间发现了一个好用的博客生成插件–Hexo。
     
     </summary>
     
@@ -55,47 +76,6 @@
     
     
       <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>我的阅历</title>
-    <link href="http://yoursite.com/%E5%89%8D%E7%AB%AF/about-me/"/>
-    <id>http://yoursite.com/前端/about-me/</id>
-    <published>2018-12-16T04:33:44.000Z</published>
-    <updated>2018-12-31T13:44:40.931Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;关于我&quot;&gt;&lt;a href=&quot;#关于我&quot; class=&quot;headerlink&quot; title=&quot;关于我&quot;&gt;&lt;/a&gt;关于我&lt;/h2&gt;&lt;p&gt;一个被java耽误的文艺青年。。&lt;/p&gt;
-&lt;p&gt;email: &lt;a href=&quot;mailto:ahutdbx@163.com&quot; ta
-      
-    
-    </summary>
-    
-      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Welcome</title>
-    <link href="http://yoursite.com/%E5%89%8D%E7%AB%AF2/hello-world/"/>
-    <id>http://yoursite.com/前端2/hello-world/</id>
-    <published>2018-01-15T23:33:44.000Z</published>
-    <updated>2018-12-31T13:43:16.516Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My Ne Post&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="前端2" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF2/"/>
-    
     
   </entry>
   

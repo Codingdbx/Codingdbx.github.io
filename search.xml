@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[java创建线程的方式]]></title>
+    <url>%2F%E5%A4%9A%E7%BA%BF%E7%A8%8B%2F2019-multithread%2F</url>
+    <content type="text"><![CDATA[Java创建线程的方法有如下3种。 1）继承Thread类创建线程 extends Thread2）实现Runnable接口创建线程 implements Runnable3）实现Callable接口和Future创建线程 implements Callable他们之间的关系如下： 继承Thread类创建线程12345678910111213141516public class MyThread extends Thread &#123; public MyThread() &#123; super(&quot;MyThread&quot;); &#125; @Override public void run() &#123; long sum=0; for(int i=0;i&lt;1999999999l;i++)&#123; sum+=i; &#125; System.out.println(sum); &#125;&#125; 启动线程，即调用线程的start()或者run()方法12345678910111213public class Text&#123; public static void main(String[] args) &#123; //第一种方式启动线程 MyThread my=new MyThread(); my.start(); //第二种方式启动线程 new Thread(my).start(); &#125; &#125; 实现Runnable接口创建线程123456789101112131415161718192021222324252627public class MyThread2 implements Runnable &#123; private int ticket = 10; public MyThread2() &#123; Thread.currentThread().setName(&quot;售票线程&quot;); &#125; /** * 模仿售票服务 */ @Override public void run() &#123; while (true) &#123; if (ticket &gt; 0) &#123; try &#123; Thread.sleep(10); &#125; catch (InterruptedException e) &#123; e.printStackTrace(); &#125; System.out.println(Thread.currentThread().getName() + &quot;is saling....&quot; + ticket--); &#125; &#125; &#125;&#125; 启动线程：执行start()或者run()方法 1234567891011121314151617public class Text02 &#123; public static void main(String[] args) &#123; /*MyThread2 tt=new MyThread2(); //启动三个线程 new Thread(tt).start(); new Thread(tt).start(); new Thread(tt).start();*/ new MyThread2().run(); new MyThread2().run(); new MyThread2().run(); &#125;&#125; 实现Callable接口和Future创建线程1234567891011121314151617public class MyThread3 implements Callable&lt;String&gt; &#123; //可以作为入参的接口 public MyThread3()&#123; Thread.currentThread().setName(&quot;MyThread3&quot;); &#125; /** * 特点：1.具有返回值 2.可以抛出异常 * @return * @throws Exception */ @Override public String call() throws Exception &#123; return &quot;true&quot;; &#125;&#125; 启动：java使用FutureTask类来包装Callable对象，该FutureTask对象封装了Callable对象的call()方法的返回值。调用FutureTask对象的get()方法来获得子线程执行结束后的返回值。 1234567891011121314151617181920212223public class Text03 &#123; public static void main(String[] args) &#123; MyThread3 myThread3=new MyThread3(); //执行 Callable 方式，需要 FutureTask 实现类的支持，用于接收运算结果 FutureTask&lt;String&gt; future = new FutureTask&lt;&gt;(myThread3); //启动线程 new Thread(future).start(); try &#123; String result = future.get(); System.out.println(&quot;结果是--&quot;+result); &#125; catch (InterruptedException e) &#123; e.printStackTrace(); &#125; catch (ExecutionException e) &#123; e.printStackTrace(); &#125; &#125;&#125; 总结区别：1、线程只是实现Runnable或实现Callable接口，还可以继承其他类。如果继承Thread类的线程类不能再继承其他父类（Java单继承决定）。注：一般推荐采用实现接口的方式来创建多线程。 2、实现Runnable和实现Callable接口的方式基本相同，不过是后者执行call()方法有返回值，后者线程执行体run()方法无返回值。]]></content>
+      <categories>
+        <category>多线程</category>
+      </categories>
+      <tags>
+        <tag>多线程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[写在新年]]></title>
     <url>%2F%E7%94%9F%E6%B4%BB%2F2019-new-year%2F</url>
-    <content type="text"><![CDATA[今天是2018年最后一天的日子。下午和老同学一起吃了个火锅，很舒服~毕竟冬天与火锅更配哦！回首2018年，我觉得我最大的收获就是总算找到奋斗的目标。感慨的是时间荏苒，到现在已经是毕业两年半了。总的来说，2018年是我的一个转折点，也算是走向好的一面！明年可能不会是很容易的一年，但我更期待明年自己的表现，加油！ 附一张我拍的夕阳~^o^~]]></content>
+    <content type="text"><![CDATA[今天是2018年最后一天的日子。下午和老同学一起吃了个火锅，很舒服~。毕竟冬天与火锅更配哦！吃完饭看着外滩的人山人海，我们一致决定回去休息，就不凑这个热闹了，哈哈。。 其实2018年一整年，自己变化还是挺大的。感觉自己有变得更加自律（我就不客气了\^o^/ ）。还有工作和生活总算有点起色，可能是来到上海的原因吧。压力的确可以逼迫一个人成长（好像把自己说的很苦逼的样子）…。我觉得自己最大的收获就是总算找到一个可以继续努力的目标。时间很紧张，但却很充实。遗憾的就是时间过的太快，好多事情还没有做！比如：去各地旅游啊、写满一百篇博客啦（目前好像只有50多篇(╯^╰〉）。其实最近几天才刚搭好的个人博客网站（比计划时间要晚了很多，但总算是赶在19年之前弄好了(∩_∩)），准备不足，还有很多地方没有优化，请各位看官见谅。。总体来说，2018年算是我的一个转折点，有在走向好的一面！ 2019年可能不会是很容易的一年，但我很期待自己的表现。还有希望父母身体健康，自己工作可以有进步，然后运气爆棚^o^，加油！ 附一张我今天拍的夕阳~^o^~]]></content>
       <categories>
         <category>生活</category>
       </categories>
@@ -15,28 +26,12 @@
   <entry>
     <title><![CDATA[使用Hexo+GitHup搭建个人博客]]></title>
     <url>%2FHexo%2F2019-hexo%2F</url>
-    <content type="text"><![CDATA[前言其实一直以来都有个想法，就是写个自己的博客网站，用来记录一些平时累积的技术和生活中的零碎想法。偶然间发现了一个好用的博客生成插件–Hexo。官网地址：https://hexo.io/zh-cn/本站所使用Next主题：https://github.com/theme-next 安装步骤参见 https://www.cnblogs.com/fengxiongZz/p/7707219.html 主题优化参见 http://theme-next.iissnan.com/参见 https://www.jianshu.com/p/f054333ac9e6 网上已经有很多很详细的安装使用教程了，所以本文就不在另起炉灶（就算再写也不一定有上面的博主写的好 →_→ ）。这里只提一下注意事项： 安装git客户端时，选第二或者第三个选项。 与GitHub关联时注意项目名与注册的GitHub账户名称要一样 如果出现输入 hexo d -g 没反应。原因：没加空格]]></content>
+    <content type="text"><![CDATA[其实一直以来都有个想法，就是写个自己的博客网站，用来记录一些平时累积的技术和生活中的零碎想法。偶然间发现了一个好用的博客生成插件–Hexo。官网地址：https://hexo.io/zh-cn/本站所使用Next主题：https://github.com/theme-next 安装步骤参见 https://www.cnblogs.com/fengxiongZz/p/7707219.html 主题优化参见 http://theme-next.iissnan.com/参见 https://www.jianshu.com/p/f054333ac9e6 网上已经有很多很详细的安装使用教程了，所以本文就不在另起炉灶（就算再写也不一定有上面的博主写的好 →_→ ）。这里只提一下注意事项： 安装git客户端时，选第二或者第三个选项。 与GitHub关联时注意项目名与注册的GitHub账户名称要一样 如果出现输入 hexo d -g 没反应。原因：没加空格]]></content>
       <categories>
         <category>Hexo</category>
       </categories>
       <tags>
         <tag>Hexo</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[我的阅历]]></title>
-    <url>%2F%E5%89%8D%E7%AB%AF%2Fabout-me%2F</url>
-    <content type="text"><![CDATA[关于我一个被java耽误的文艺青年。。 email: ahutdbx@163.com wechat:124533215]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[Welcome]]></title>
-    <url>%2F%E5%89%8D%E7%AB%AF2%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My Ne Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
-      <categories>
-        <category>前端2</category>
-      </categories>
   </entry>
 </search>

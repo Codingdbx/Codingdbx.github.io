@@ -115,22 +115,20 @@
 
 
 
-  <meta name="description" content="其实一直以来都有个想法，就是写个自己的博客网站，用来记录一些平时累积的技术和生活中的零碎想法。偶然间发现了一个好用的博客生成插件–Hexo。">
-<meta name="keywords" content="Hexo">
+  <meta name="description" content="Java创建线程的方法有如下3种。 1）继承Thread类创建线程 extends Thread2）实现Runnable接口创建线程 implements Runnable3）实现Callable接口和Future创建线程 implements Callable">
+<meta name="keywords" content="多线程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用Hexo+GitHup搭建个人博客">
-<meta property="og:url" content="http://yoursite.com/Hexo/2019-hexo/index.html">
+<meta property="og:title" content="java创建线程的方式">
+<meta property="og:url" content="http://yoursite.com/多线程/2019-multithread/index.html">
 <meta property="og:site_name" content="dongbixi&#39;blog">
-<meta property="og:description" content="其实一直以来都有个想法，就是写个自己的博客网站，用来记录一些平时累积的技术和生活中的零碎想法。偶然间发现了一个好用的博客生成插件–Hexo。">
+<meta property="og:description" content="Java创建线程的方法有如下3种。 1）继承Thread类创建线程 extends Thread2）实现Runnable接口创建线程 implements Runnable3）实现Callable接口和Future创建线程 implements Callable">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/Hexo/2019-hexo/20181127221852774.png">
-<meta property="og:image" content="http://yoursite.com/Hexo/2019-hexo/20181127222006385.png">
-<meta property="og:image" content="http://yoursite.com/Hexo/2019-hexo/20181127222206790.png">
-<meta property="og:updated_time" content="2019-01-06T11:42:32.684Z">
+<meta property="og:image" content="http://yoursite.com/多线程/2019-multithread/20190106184706495.png">
+<meta property="og:updated_time" content="2019-01-06T11:42:05.529Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用Hexo+GitHup搭建个人博客">
-<meta name="twitter:description" content="其实一直以来都有个想法，就是写个自己的博客网站，用来记录一些平时累积的技术和生活中的零碎想法。偶然间发现了一个好用的博客生成插件–Hexo。">
-<meta name="twitter:image" content="http://yoursite.com/Hexo/2019-hexo/20181127221852774.png">
+<meta name="twitter:title" content="java创建线程的方式">
+<meta name="twitter:description" content="Java创建线程的方法有如下3种。 1）继承Thread类创建线程 extends Thread2）实现Runnable接口创建线程 implements Runnable3）实现Callable接口和Future创建线程 implements Callable">
+<meta name="twitter:image" content="http://yoursite.com/多线程/2019-multithread/20190106184706495.png">
 
 
 
@@ -139,7 +137,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/Hexo/2019-hexo/">
+  <link rel="canonical" href="http://yoursite.com/多线程/2019-multithread/">
 
 
 
@@ -149,7 +147,7 @@
   };
 </script>
 
-  <title>使用Hexo+GitHup搭建个人博客 | dongbixi'blog</title>
+  <title>java创建线程的方式 | dongbixi'blog</title>
   
 
 
@@ -408,7 +406,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Hexo/2019-hexo/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/多线程/2019-multithread/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="dongbixi">
@@ -425,7 +423,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">使用Hexo+GitHup搭建个人博客
+          <h1 class="post-title" itemprop="name headline">java创建线程的方式
               
             
           </h1>
@@ -450,7 +448,7 @@
                 
               
 
-              <time title="创建时间：2018-12-31 17:48:48" itemprop="dateCreated datePublished" datetime="2018-12-31T17:48:48+08:00">2018-12-31</time>
+              <time title="创建时间：2019-01-06 19:30:48" itemprop="dateCreated datePublished" datetime="2019-01-06T19:30:48+08:00">2019-01-06</time>
             
 
             
@@ -468,7 +466,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/多线程/" itemprop="url" rel="index"><span itemprop="name">多线程</span></a></span>
 
                 
                 
@@ -483,8 +481,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/Hexo/2019-hexo/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Hexo/2019-hexo/" itemprop="commentCount"></span>
+                <a href="/多线程/2019-multithread/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/多线程/2019-multithread/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -492,7 +490,7 @@
 
           
           
-             <span id="/Hexo/2019-hexo/" class="leancloud_visitors" data-flag-title="使用Hexo+GitHup搭建个人博客">
+             <span id="/多线程/2019-multithread/" class="leancloud_visitors" data-flag-title="java创建线程的方式">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -523,21 +521,19 @@
       
 
       
-        <p>其实一直以来都有个想法，就是写个自己的博客网站，用来记录一些平时累积的技术和生活中的零碎想法。偶然间发现了一个好用的博客生成插件–Hexo。<a id="more"></a><br>官网地址：<a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">https://hexo.io/zh-cn/</a><br>本站所使用Next主题：<a href="https://github.com/theme-next" target="_blank" rel="noopener">https://github.com/theme-next</a></p>
-<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><p>参见 <a href="https://www.cnblogs.com/fengxiongZz/p/7707219.html" target="_blank" rel="noopener">https://www.cnblogs.com/fengxiongZz/p/7707219.html</a></p>
-<h2 id="主题优化"><a href="#主题优化" class="headerlink" title="主题优化"></a>主题优化</h2><p>参见 <a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">http://theme-next.iissnan.com/</a><br>参见 <a href="https://www.jianshu.com/p/f054333ac9e6" target="_blank" rel="noopener">https://www.jianshu.com/p/f054333ac9e6</a></p>
-<h2 id="网上已经有很多很详细的安装使用教程了，所以本文就不在另起炉灶（就算再写也不一定有上面的博主写的好-→-→-）。这里只提一下注意事项："><a href="#网上已经有很多很详细的安装使用教程了，所以本文就不在另起炉灶（就算再写也不一定有上面的博主写的好-→-→-）。这里只提一下注意事项：" class="headerlink" title="网上已经有很多很详细的安装使用教程了，所以本文就不在另起炉灶（就算再写也不一定有上面的博主写的好 →_→ ）。这里只提一下注意事项："></a>网上已经有很多很详细的安装使用教程了，所以本文就不在另起炉灶（就算再写也不一定有上面的博主写的好 →_→ ）。这里只提一下注意事项：</h2><ol>
-<li>安装git客户端时，选第二或者第三个选项。</li>
-</ol>
-<p><img src="20181127221852774.png" alt=""></p>
-<ol start="2">
-<li>与GitHub关联时注意项目名与注册的GitHub账户名称要一样</li>
-</ol>
-<p><img src="20181127222006385.png" alt=""></p>
-<ol start="3">
-<li>如果出现输入 hexo d -g 没反应。<br>原因：没加空格</li>
-</ol>
-<p><img src="20181127222206790.png" alt=""></p>
+        <p>Java创建线程的方法有如下3种。</p>
+<p>1）继承Thread类创建线程 extends Thread<br>2）实现Runnable接口创建线程 implements Runnable<br>3）实现Callable接口和Future创建线程 implements Callable<v><br><a id="more"></a>他们之间的关系如下：</v></p>
+<p><img src="20190106184706495.png" alt=""></p>
+<h4 id="继承Thread类创建线程"><a href="#继承Thread类创建线程" class="headerlink" title="继承Thread类创建线程"></a>继承Thread类创建线程</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public class MyThread extends Thread &#123;</span><br><span class="line"></span><br><span class="line">	public MyThread() &#123;</span><br><span class="line">		super(&quot;MyThread&quot;);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	@Override</span><br><span class="line">	public void run() &#123;</span><br><span class="line">		long sum=0;</span><br><span class="line">		for(int i=0;i&lt;1999999999l;i++)&#123;</span><br><span class="line">			sum+=i;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		System.out.println(sum);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>启动线程，即调用线程的start()或者run()方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public class Text&#123;</span><br><span class="line">	</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">	</span><br><span class="line">		  //第一种方式启动线程</span><br><span class="line">		  MyThread my=new MyThread();</span><br><span class="line">		  my.start();</span><br><span class="line"></span><br><span class="line">		  //第二种方式启动线程</span><br><span class="line">		  new Thread(my).start();</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="实现Runnable接口创建线程"><a href="#实现Runnable接口创建线程" class="headerlink" title="实现Runnable接口创建线程"></a>实现Runnable接口创建线程</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">public class MyThread2 implements Runnable &#123;</span><br><span class="line"></span><br><span class="line">	private int ticket = 10;</span><br><span class="line"></span><br><span class="line">	public MyThread2() &#123;</span><br><span class="line">		Thread.currentThread().setName(&quot;售票线程&quot;);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	/**</span><br><span class="line">	 * 模仿售票服务</span><br><span class="line">	 */</span><br><span class="line">	@Override</span><br><span class="line">	public void run() &#123;</span><br><span class="line"></span><br><span class="line">		while (true) &#123;</span><br><span class="line">			if (ticket &gt; 0) &#123;</span><br><span class="line">				try &#123;</span><br><span class="line">					Thread.sleep(10);</span><br><span class="line">				&#125; catch (InterruptedException e) &#123;</span><br><span class="line">					e.printStackTrace();</span><br><span class="line">				&#125;</span><br><span class="line"></span><br><span class="line">				System.out.println(Thread.currentThread().getName() + &quot;is saling....&quot; + ticket--);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>启动线程：执行start()或者run()方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">public class Text02 &#123;</span><br><span class="line"></span><br><span class="line">		public static void main(String[] args) &#123;</span><br><span class="line">			</span><br><span class="line">			/*MyThread2 tt=new MyThread2();</span><br><span class="line">			</span><br><span class="line">			//启动三个线程</span><br><span class="line">			new Thread(tt).start();</span><br><span class="line">			new Thread(tt).start();</span><br><span class="line">			new Thread(tt).start();*/</span><br><span class="line"></span><br><span class="line">			new MyThread2().run();</span><br><span class="line">            new MyThread2().run();</span><br><span class="line">            new MyThread2().run();</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="实现Callable接口和Future创建线程"><a href="#实现Callable接口和Future创建线程" class="headerlink" title="实现Callable接口和Future创建线程"></a>实现Callable接口和Future创建线程</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">public class MyThread3 implements Callable&lt;String&gt; &#123;</span><br><span class="line"></span><br><span class="line">    //可以作为入参的接口</span><br><span class="line">    public MyThread3()&#123;</span><br><span class="line">        Thread.currentThread().setName(&quot;MyThread3&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    /**</span><br><span class="line">     * 特点：1.具有返回值 2.可以抛出异常</span><br><span class="line">     * @return</span><br><span class="line">     * @throws Exception</span><br><span class="line">     */</span><br><span class="line">    @Override</span><br><span class="line">    public String call() throws Exception &#123;</span><br><span class="line"></span><br><span class="line">        return &quot;true&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>启动：java使用FutureTask类来包装Callable对象，该FutureTask对象封装了Callable对象的call()方法的返回值。调用FutureTask对象的get()方法来获得子线程执行结束后的返回值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">public class Text03 &#123;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">        MyThread3 myThread3=new MyThread3();</span><br><span class="line"></span><br><span class="line">        //执行 Callable 方式，需要 FutureTask 实现类的支持，用于接收运算结果</span><br><span class="line">        FutureTask&lt;String&gt; future = new FutureTask&lt;&gt;(myThread3);</span><br><span class="line"></span><br><span class="line">        //启动线程</span><br><span class="line">        new Thread(future).start();</span><br><span class="line"></span><br><span class="line">        try &#123;</span><br><span class="line">            String result = future.get();</span><br><span class="line">            System.out.println(&quot;结果是--&quot;+result);</span><br><span class="line"></span><br><span class="line">        &#125; catch (InterruptedException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; catch (ExecutionException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="总结区别："><a href="#总结区别：" class="headerlink" title="总结区别："></a>总结区别：</h4><p>1、线程只是实现Runnable或实现Callable接口，还可以继承其他类。如果继承Thread类的线程类不能再继承其他父类（Java单继承决定）。注：一般推荐采用实现接口的方式来创建多线程。</p>
+<p>2、实现Runnable和实现Callable接口的方式基本相同，不过是后者执行call()方法有返回值，后者线程执行体run()方法无返回值。</p>
 
       
     </div>
@@ -561,7 +557,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+            <a href="/tags/多线程/" rel="tag"># 多线程</a>
           
         </div>
       
@@ -574,15 +570,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/生活/2019-new-year/" rel="next" title="写在新年">
+                <i class="fa fa-chevron-left"></i> 写在新年
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/生活/2019-new-year/" rel="prev" title="写在新年">
-                写在新年 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -792,7 +788,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装步骤"><span class="nav-number">1.</span> <span class="nav-text">安装步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主题优化"><span class="nav-number">2.</span> <span class="nav-text">主题优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网上已经有很多很详细的安装使用教程了，所以本文就不在另起炉灶（就算再写也不一定有上面的博主写的好-→-→-）。这里只提一下注意事项："><span class="nav-number">3.</span> <span class="nav-text">网上已经有很多很详细的安装使用教程了，所以本文就不在另起炉灶（就算再写也不一定有上面的博主写的好 →_→ ）。这里只提一下注意事项：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#继承Thread类创建线程"><span class="nav-number">1.</span> <span class="nav-text">继承Thread类创建线程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实现Runnable接口创建线程"><span class="nav-number">2.</span> <span class="nav-text">实现Runnable接口创建线程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实现Callable接口和Future创建线程"><span class="nav-number">3.</span> <span class="nav-text">实现Callable接口和Future创建线程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#总结区别："><span class="nav-number">4.</span> <span class="nav-text">总结区别：</span></a></li></ol></div>
             
 
           </div>
