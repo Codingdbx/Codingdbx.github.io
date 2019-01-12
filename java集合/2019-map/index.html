@@ -123,7 +123,7 @@
 <meta property="og:site_name" content="dongbixi&#39;blog">
 <meta property="og:description" content="java中像list,set,map集合基本是每个人开发者都会用到的，那么今天就来总结一下他们的遍历方式吧。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-12T14:53:27.540Z">
+<meta property="og:updated_time" content="2019-01-12T15:02:37.093Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java中集合List,Set,Map的遍历方式总结">
 <meta name="twitter:description" content="java中像list,set,map集合基本是每个人开发者都会用到的，那么今天就来总结一下他们的遍历方式吧。">
@@ -552,14 +552,14 @@
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Iterator&lt;Integer&gt; iterator=map.keySet().iterator();</span><br><span class="line"></span><br><span class="line">while (iterator.hasNext())&#123;</span><br><span class="line">	  //System.out.println(iterator.next()+&quot;---&quot;+map.get(iterator.next())); //注意:同一句话中不能出现两次iterator调用。</span><br><span class="line">	  Integer i=iterator.next();</span><br><span class="line">	  System.out.println(&quot;key=&quot;+i+&quot; value=&quot;+ map.get(i));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
-<li>通过map.entrySet()遍历 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Iterator&lt;Map.Entry&lt;Integer, String&gt;&gt; entryIterator=map.entrySet().iterator();</span><br><span class="line"></span><br><span class="line">while (entryIterator.hasNext())&#123;</span><br><span class="line">	  Entry&lt;Integer, String&gt; entry = entryIterator.next();</span><br><span class="line">	  System.out.println(&quot;key=&quot;+entry.getKey()+&quot; value=&quot;+entry.getValue());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
+<li>通过map.entrySet()遍历 </li>
 </ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Iterator&lt;Map.Entry&lt;Integer, String&gt;&gt; entryIterator=map.entrySet().iterator();</span><br><span class="line"></span><br><span class="line">while (entryIterator.hasNext())&#123;</span><br><span class="line">	  Entry&lt;Integer, String&gt; entry = entryIterator.next();</span><br><span class="line">	  System.out.println(&quot;key=&quot;+entry.getKey()+&quot; value=&quot;+entry.getValue());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>这种可以把 key value 同时取出，推荐！</p>
 <ul>
 <li>jdk1.8–通过forEach遍历</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">map.forEach((key,value)-&gt;&#123;</span><br><span class="line">		System.out.println(&quot;key=&quot; + key + &quot; value=&quot; + value);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">map.forEach((key,value)-&gt;&#123;</span><br><span class="line">	System.out.println(&quot;key=&quot; + key + &quot; value=&quot; + value);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
       
     </div>
