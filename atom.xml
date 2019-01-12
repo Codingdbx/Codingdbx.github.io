@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-06T11:42:05.529Z</updated>
+  <updated>2019-01-12T14:36:05.098Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>java创建线程池的方式</title>
+    <link href="http://yoursite.com/%E5%A4%9A%E7%BA%BF%E7%A8%8B/2019-multithread2/"/>
+    <id>http://yoursite.com/多线程/2019-multithread2/</id>
+    <published>2019-01-12T14:20:48.000Z</published>
+    <updated>2019-01-12T14:36:05.098Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在上一篇中 java创建线程的方式 已经讲过java如何创建线程。但在实际开发中，一般不去单独创建线程。而是使用线程池提供的线程。好处就是减少在创建和销毁线程所消耗的时间及系统资源。java中创建线程池的方式主要有以下几种。
+    
+    </summary>
+    
+      <category term="多线程" scheme="http://yoursite.com/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+    
+      <category term="多线程" scheme="http://yoursite.com/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>java创建线程的方式</title>
