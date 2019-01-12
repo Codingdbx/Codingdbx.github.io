@@ -123,7 +123,7 @@
 <meta property="og:site_name" content="dongbixi&#39;blog">
 <meta property="og:description" content="在上一篇中 java创建线程的方式 已经讲过java如何创建线程。但在实际开发中，一般不去单独创建线程。而是使用线程池提供的线程。好处就是减少在创建和销毁线程所消耗的时间及系统资源。java中创建线程池的方式主要有以下几种。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-12T14:45:46.150Z">
+<meta property="og:updated_time" content="2019-01-12T14:48:03.145Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java创建线程池的方式">
 <meta name="twitter:description" content="在上一篇中 java创建线程的方式 已经讲过java如何创建线程。但在实际开发中，一般不去单独创建线程。而是使用线程池提供的线程。好处就是减少在创建和销毁线程所消耗的时间及系统资源。java中创建线程池的方式主要有以下几种。">
@@ -266,7 +266,7 @@
       
     
 
-    <a href="/archives" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">4</span></a>
+    <a href="/archives" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">5</span></a>
 
   </li>
         
@@ -285,7 +285,7 @@
       
     
 
-    <a href="/categories" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">3</span></a>
+    <a href="/categories" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">4</span></a>
 
   </li>
         
@@ -304,7 +304,7 @@
       
     
 
-    <a href="/tags" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">4</span></a>
+    <a href="/tags" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">5</span></a>
 
   </li>
         
@@ -529,7 +529,7 @@
 <h2 id="newSingleThreadExecutor"><a href="#newSingleThreadExecutor" class="headerlink" title="newSingleThreadExecutor()"></a>newSingleThreadExecutor()</h2><p>创建一个单线程的线程池。</p>
 <p>1.这个线程池只有一个线程在工作，也就是相当于单线程串行执行所有任务。<br>2.如果这个唯一的线程因为异常结束，那么会有一个新的线程来替代它。</p>
 <p>缺点：<br>1.不适合并发。<br>2.允许的请求队列不做限制，可能会堆积大量的请求，从而OOM。<br><code>ExecutorService executorService = Executors.newSingleThreadExecutor();</code></p>
-<h2 id="newScheduledThreadPool-10"><a href="#newScheduledThreadPool-10" class="headerlink" title="newScheduledThreadPool(10)"></a>newScheduledThreadPool(10)</h2><p> 创建一个固定大小线程池，可以定时或周期性的执行任务。</p>
+<h2 id="newScheduledThreadPool-int-nThreads"><a href="#newScheduledThreadPool-int-nThreads" class="headerlink" title="newScheduledThreadPool(int nThreads)"></a>newScheduledThreadPool(int nThreads)</h2><p> 创建一个固定大小线程池，可以定时或周期性的执行任务。</p>
 <p> 缺点：<br> 1.大小固定，不灵活。<br> 2.允许的请求队列不做限制，可能会堆积大量的请求，从而OOM。<br><code>ScheduledExecutorService scheduledService = Executors.newScheduledThreadPool(10);</code></p>
 <h2 id="使用ThreadPoolExecutor类"><a href="#使用ThreadPoolExecutor类" class="headerlink" title="使用ThreadPoolExecutor类"></a>使用ThreadPoolExecutor类</h2><p>《阿里巴巴开发手册》中指明了建议使用这种方式创建线程池。而不建议使用Executors。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * //corePoolSize     核心线程池大小</span><br><span class="line"> * //maximumPoolSize  最大线程池大小</span><br><span class="line"> * //keepAliveTime    最大存活时间</span><br><span class="line"> * //unit             keepAliveTime时间单位</span><br><span class="line"> * //workQueue        等待执行任务的队列</span><br><span class="line"> * //handler          拒绝策略</span><br><span class="line"> */</span><br><span class="line">ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(20, 50, 30,TimeUnit.MINUTES, </span><br><span class="line">                                       new ArrayBlockingQueue&lt;Runnable&gt;(10));</span><br></pre></td></tr></table></figure>
@@ -583,6 +583,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/java集合/2019-map/" rel="prev" title="java中集合List,Set,Map的遍历方式总结">
+                java中集合List,Set,Map的遍历方式总结 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -658,7 +662,7 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -677,7 +681,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -698,7 +704,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -788,7 +796,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#newCachedThreadPool"><span class="nav-number">1.</span> <span class="nav-text">newCachedThreadPool()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#newFixedThreadPool-int-nThreads"><span class="nav-number">2.</span> <span class="nav-text">newFixedThreadPool(int nThreads)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#newSingleThreadExecutor"><span class="nav-number">3.</span> <span class="nav-text">newSingleThreadExecutor()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#newScheduledThreadPool-10"><span class="nav-number">4.</span> <span class="nav-text">newScheduledThreadPool(10)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用ThreadPoolExecutor类"><span class="nav-number">5.</span> <span class="nav-text">使用ThreadPoolExecutor类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#提交方式"><span class="nav-number">6.</span> <span class="nav-text">提交方式</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#newCachedThreadPool"><span class="nav-number">1.</span> <span class="nav-text">newCachedThreadPool()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#newFixedThreadPool-int-nThreads"><span class="nav-number">2.</span> <span class="nav-text">newFixedThreadPool(int nThreads)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#newSingleThreadExecutor"><span class="nav-number">3.</span> <span class="nav-text">newSingleThreadExecutor()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#newScheduledThreadPool-int-nThreads"><span class="nav-number">4.</span> <span class="nav-text">newScheduledThreadPool(int nThreads)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用ThreadPoolExecutor类"><span class="nav-number">5.</span> <span class="nav-text">使用ThreadPoolExecutor类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#提交方式"><span class="nav-number">6.</span> <span class="nav-text">提交方式</span></a></li></ol></div>
             
 
           </div>

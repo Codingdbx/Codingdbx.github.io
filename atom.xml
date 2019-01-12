@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-12T14:45:46.150Z</updated>
+  <updated>2019-01-12T14:51:31.140Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>java中集合List,Set,Map的遍历方式总结</title>
+    <link href="http://yoursite.com/java%E9%9B%86%E5%90%88/2019-map/"/>
+    <id>http://yoursite.com/java集合/2019-map/</id>
+    <published>2019-01-12T14:51:48.000Z</published>
+    <updated>2019-01-12T14:51:31.140Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;java中像list,set,map集合基本是每个人开发者都会用到的，那么今天就来总结一下他们的遍历方式吧。&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h2 id=&quot;List-遍历方式（4种）&quot;&gt;&lt;a href=&quot;#List-遍历方式（4种）&quot; class=&quot;headerlink&quot; tit
+      
+    
+    </summary>
+    
+      <category term="java集合" scheme="http://yoursite.com/categories/java%E9%9B%86%E5%90%88/"/>
+    
+    
+      <category term="集合" scheme="http://yoursite.com/tags/%E9%9B%86%E5%90%88/"/>
+    
+  </entry>
+  
+  <entry>
     <title>java创建线程池的方式</title>
     <link href="http://yoursite.com/%E5%A4%9A%E7%BA%BF%E7%A8%8B/2019-multithread2/"/>
     <id>http://yoursite.com/多线程/2019-multithread2/</id>
     <published>2019-01-12T14:20:48.000Z</published>
-    <updated>2019-01-12T14:45:46.150Z</updated>
+    <updated>2019-01-12T14:48:03.145Z</updated>
     
     <summary type="html">
     
