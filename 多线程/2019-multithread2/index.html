@@ -123,7 +123,7 @@
 <meta property="og:site_name" content="dongbixi&#39;blog">
 <meta property="og:description" content="在上一篇中 java创建线程的方式 已经讲过java如何创建线程。但在实际开发中，一般不去单独创建线程。而是使用线程池提供的线程。好处就是减少在创建和销毁线程所消耗的时间及系统资源。java中创建线程池的方式主要有以下几种。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-12T14:43:07.784Z">
+<meta property="og:updated_time" content="2019-01-12T14:45:46.150Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java创建线程池的方式">
 <meta name="twitter:description" content="在上一篇中 java创建线程的方式 已经讲过java如何创建线程。但在实际开发中，一般不去单独创建线程。而是使用线程池提供的线程。好处就是减少在创建和销毁线程所消耗的时间及系统资源。java中创建线程池的方式主要有以下几种。">
@@ -522,18 +522,17 @@
         <p>在上一篇中 java创建线程的方式 已经讲过java如何创建线程。但在实际开发中，一般不去单独创建线程。而是使用线程池提供的线程。好处就是减少在创建和销毁线程所消耗的时间及系统资源。java中创建线程池的方式主要有以下几种。<a id="more"></a><br><br></p>
 <h2 id="newCachedThreadPool"><a href="#newCachedThreadPool" class="headerlink" title="newCachedThreadPool()"></a>newCachedThreadPool()</h2><p>创建一个可缓存的线程池。</p>
 <p>1.如果线程池的大小超过了处理任务所需要的线程，那么就会回收部分空闲的线程。<br>2.当任务数增加时，此线程池又可以智能的添加新线程来处理任务。<br>3.此线程池不会对线程池大小做限制，线程池大小完全依赖于操作系统（或者说JVM）能够创建的最大线程大小。</p>
-<p>缺点：一旦线程无限增长，会导致OOM。<br>    <code>ExecutorService executorService = Executors.newCachedThreadPool();</code><br><br></p>
+<p>缺点：一旦线程无限增长，会导致OOM。<br>    <code>ExecutorService executorService = Executors.newCachedThreadPool();</code></p>
 <h2 id="newFixedThreadPool-int-nThreads"><a href="#newFixedThreadPool-int-nThreads" class="headerlink" title="newFixedThreadPool(int nThreads)"></a>newFixedThreadPool(int nThreads)</h2><p>创建固定大小的线程池。  </p>
 <p>1.每次提交一个任务就创建一个线程，直到线程达到线程池的最大大小。<br>2.线程池的大小一旦达到最大值就会保持不变，超出的线程会在队列中等待。<br>3.如果某个线程因为执行异常而结束，那么线程池会补充一个新线程。</p>
-<p>缺点：<br>1.大小固定，不灵活。<br>2.允许的请求队列不做限制，可能会堆积大量的请求，从而OOM。<br><code>ExecutorService executorService = Executors.newFixedThreadPool(10);</code><br><br></p>
+<p>缺点：<br>1.大小固定，不灵活。<br>2.允许的请求队列不做限制，可能会堆积大量的请求，从而OOM。<br><code>ExecutorService executorService = Executors.newFixedThreadPool(10);</code></p>
 <h2 id="newSingleThreadExecutor"><a href="#newSingleThreadExecutor" class="headerlink" title="newSingleThreadExecutor()"></a>newSingleThreadExecutor()</h2><p>创建一个单线程的线程池。</p>
 <p>1.这个线程池只有一个线程在工作，也就是相当于单线程串行执行所有任务。<br>2.如果这个唯一的线程因为异常结束，那么会有一个新的线程来替代它。</p>
-<p>缺点：<br>1.不适合并发。<br>2.允许的请求队列不做限制，可能会堆积大量的请求，从而OOM。<br><code>ExecutorService executorService = Executors.newSingleThreadExecutor();</code><br><br></p>
+<p>缺点：<br>1.不适合并发。<br>2.允许的请求队列不做限制，可能会堆积大量的请求，从而OOM。<br><code>ExecutorService executorService = Executors.newSingleThreadExecutor();</code></p>
 <h2 id="newScheduledThreadPool-10"><a href="#newScheduledThreadPool-10" class="headerlink" title="newScheduledThreadPool(10)"></a>newScheduledThreadPool(10)</h2><p> 创建一个固定大小线程池，可以定时或周期性的执行任务。</p>
-<p> 缺点：<br> 1.大小固定，不灵活。<br> 2.允许的请求队列不做限制，可能会堆积大量的请求，从而OOM。<br><code>ScheduledExecutorService scheduledService = Executors.newScheduledThreadPool(10);</code><br><br></p>
+<p> 缺点：<br> 1.大小固定，不灵活。<br> 2.允许的请求队列不做限制，可能会堆积大量的请求，从而OOM。<br><code>ScheduledExecutorService scheduledService = Executors.newScheduledThreadPool(10);</code></p>
 <h2 id="使用ThreadPoolExecutor类"><a href="#使用ThreadPoolExecutor类" class="headerlink" title="使用ThreadPoolExecutor类"></a>使用ThreadPoolExecutor类</h2><p>《阿里巴巴开发手册》中指明了建议使用这种方式创建线程池。而不建议使用Executors。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * //corePoolSize     核心线程池大小</span><br><span class="line"> * //maximumPoolSize  最大线程池大小</span><br><span class="line"> * //keepAliveTime    最大存活时间</span><br><span class="line"> * //unit             keepAliveTime时间单位</span><br><span class="line"> * //workQueue        等待执行任务的队列</span><br><span class="line"> * //handler          拒绝策略</span><br><span class="line"> */</span><br><span class="line">ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(20, 50, 30,TimeUnit.MINUTES, </span><br><span class="line">                                       new ArrayBlockingQueue&lt;Runnable&gt;(10));</span><br></pre></td></tr></table></figure>
-<p><br></p>
 <h2 id="提交方式"><a href="#提交方式" class="headerlink" title="提交方式"></a>提交方式</h2><p>有两种提交任务的方式：Executor.execute() 和 ExecutorService.submit()。</p>
 <ul>
 <li>通过Executor.execute()方法提交的任务，必须实现Runnable接口，该方式提交的任务不能获取返回值，因此无法判断任务是否执行成功。</li>
