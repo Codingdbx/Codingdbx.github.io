@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>dongbixi&#39;blog</title>
+  <title>coding.dbx&#39;blog</title>
   
   <subtitle>分享技术与生活</subtitle>
   <link href="/atom.xml" rel="self"/>
@@ -10,7 +10,7 @@
   <id>http://yoursite.com/</id>
   
   <author>
-    <name>dongbixi</name>
+    <name>coding.dbx</name>
     
   </author>
   
