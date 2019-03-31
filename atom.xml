@@ -1,20 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>coding.dbx&#39;blog</title>
+  <title>coding.dong&#39;blog</title>
   
   <subtitle>分享技术与生活</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-10T13:16:53.206Z</updated>
+  <updated>2019-03-31T07:58:50.157Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
-    <name>coding.dbx</name>
+    <name>coding.dong</name>
     
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>说说浏览器的跨域问题</title>
+    <link href="http://yoursite.com/%E6%8A%80%E6%9C%AF/2019-cors/"/>
+    <id>http://yoursite.com/技术/2019-cors/</id>
+    <published>2019-03-31T07:04:33.000Z</published>
+    <updated>2019-03-31T07:58:50.157Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;由于最近一个项目，采用的是前后端分离的开发模式，故在项目尾声进行接口调试的时候，便出现了跨域的问题。于是在Google与百度上查阅了不少的博客及资料。现总结一下解决的思路与方法。
+    
+    </summary>
+    
+      <category term="技术" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="跨域" scheme="http://yoursite.com/tags/%E8%B7%A8%E5%9F%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>写在新年</title>

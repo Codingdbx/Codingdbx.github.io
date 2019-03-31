@@ -115,17 +115,20 @@
 
 
 
-  <meta name="description" content="如果你发现生活不如意，我希望你有勇气重来">
-<meta name="keywords" content="blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="coding.dong&#39;blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="由于最近一个项目，采用的是前后端分离的开发模式，故在项目尾声进行接口调试的时候，便出现了跨域的问题。于是在Google与百度上查阅了不少的博客及资料。现总结一下解决的思路与方法。">
+<meta name="keywords" content="跨域">
+<meta property="og:type" content="article">
+<meta property="og:title" content="说说浏览器的跨域问题">
+<meta property="og:url" content="http://yoursite.com/技术/2019-cors/index.html">
 <meta property="og:site_name" content="coding.dong&#39;blog">
-<meta property="og:description" content="如果你发现生活不如意，我希望你有勇气重来">
+<meta property="og:description" content="由于最近一个项目，采用的是前后端分离的开发模式，故在项目尾声进行接口调试的时候，便出现了跨域的问题。于是在Google与百度上查阅了不少的博客及资料。现总结一下解决的思路与方法。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://blog-image-1258491052.cos.ap-shanghai.myqcloud.com/github_blog/Snipaste_2019-03-31_15-55-17.png">
+<meta property="og:updated_time" content="2019-03-31T07:58:50.157Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="coding.dong&#39;blog">
-<meta name="twitter:description" content="如果你发现生活不如意，我希望你有勇气重来">
+<meta name="twitter:title" content="说说浏览器的跨域问题">
+<meta name="twitter:description" content="由于最近一个项目，采用的是前后端分离的开发模式，故在项目尾声进行接口调试的时候，便出现了跨域的问题。于是在Google与百度上查阅了不少的博客及资料。现总结一下解决的思路与方法。">
+<meta name="twitter:image" content="https://blog-image-1258491052.cos.ap-shanghai.myqcloud.com/github_blog/Snipaste_2019-03-31_15-55-17.png">
 
 
 
@@ -134,7 +137,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/技术/2019-cors/">
 
 
 
@@ -144,7 +147,7 @@
   };
 </script>
 
-  <title>coding.dong'blog</title>
+  <title>说说浏览器的跨域问题 | coding.dong'blog</title>
   
 
 
@@ -193,8 +196,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -235,7 +237,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
 
     
     
@@ -387,9 +389,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -421,10 +423,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/技术/2019-cors/" class="post-title-link" itemprop="http://yoursite.com/index.html">说说浏览器的跨域问题</a>
+          <h1 class="post-title" itemprop="name headline">说说浏览器的跨域问题
               
             
           </h1>
@@ -536,20 +535,53 @@
       
 
       
-        
-          <p>由于最近一个项目，采用的是前后端分离的开发模式，故在项目尾声进行接口调试的时候，便出现了跨域的问题。于是在Google与百度上查阅了不少的博客及资料。现总结一下解决的思路与方法。
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/技术/2019-cors/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-         
-          <!--/noindex-->
-        
+        <p>由于最近一个项目，采用的是前后端分离的开发模式，故在项目尾声进行接口调试的时候，便出现了跨域的问题。于是在Google与百度上查阅了不少的博客及资料。现总结一下解决的思路与方法。<a id="more"></a></p>
+<h2 id="什么是跨域请求"><a href="#什么是跨域请求" class="headerlink" title="什么是跨域请求"></a>什么是跨域请求</h2><p>如果当前发起请求的域与该请求指向的资源所在的域不一样。就是一个跨域请求。例如：前端同事的机器地址是<a href="http://192.168.37.132:8080,我的机器地址" target="_blank" rel="noopener">http://192.168.37.132:8080,我的机器地址</a> <a href="http://192.168.37.133:8081。" target="_blank" rel="noopener">http://192.168.37.133:8081。</a> 那么从他的电脑发起向我的电脑的数据请求就是一个跨域请求。如果从我的本机 <a href="http://localhost:8081" target="_blank" rel="noopener">http://localhost:8081</a> 发起向后台 <a href="http://localhost:8081" target="_blank" rel="noopener">http://localhost:8081</a> 的请求就是一个同源请求。<br>这里的域指的是这样的一个概念：协议 + 域名 + 端口号均相同，那么就是同域。否则是跨域。</p>
+<h2 id="浏览器对跨域做出的限制"><a href="#浏览器对跨域做出的限制" class="headerlink" title="浏览器对跨域做出的限制"></a>浏览器对跨域做出的限制</h2><p>正常的请求后台是可以返回接口数据的。但是如果是跨域请求，则后台接口数据是无法正确返回的，这时浏览器会报一个跨域错误。No ‘Access-Control-Allow-Origin’ header is present on the requested resource。这是因为浏览器对跨域请求作出了限制。那么浏览器为什么要对跨域请求作出限制呢？其实主要是出于安全方面的考虑，因为跨域请求有可能被不法分子利用来发动 CSRF(跨站请求伪造)攻击。具体什么是CSRF？请自行百度一下。目前我们只需要知道跨域请求会带来安全问题，所以浏览器会限制它的发生。具体如何解决，请看下文。</p>
+<h2 id="跨域解决方法"><a href="#跨域解决方法" class="headerlink" title="跨域解决方法"></a>跨域解决方法</h2><p>虽然在安全层面上跨域限制是必要的，但有时我们又需要发送跨域请求，比如我上面公司的项目遇到的情况。所以就需要绕开浏览器跨域的限制。方法有许多种，适应各种不同的情况。比如前端的话可以给请求加个代理。或者使用 JSONP, CORS 方法。下面就介绍一下 CORS 是如何解决跨域的。</p>
+<h2 id="跨域资源共享CORS"><a href="#跨域资源共享CORS" class="headerlink" title="跨域资源共享CORS"></a>跨域资源共享CORS</h2><p>CORS是一个W3C标准，全称是”跨域资源共享”（Cross-origin resource sharing）。它允许浏览器向跨源服务器，发出XMLHttpRequest 请求。可以很好的解决 Ajax 只能同源使用的限制。CORS新增了一组HTTP首部字段。只要浏览器发现是跨域请求，就会自动添加一些附加的头信息，有时还会多出一次附加的请求，但用户不会有感觉。</p>
+<p>下面是CORS中新增的HTTP首部字段：</p>
+<ul>
+<li>Origin  //该首部字段表明预检请求或实际请求的源站。不管是否为跨域请求，Origin字段都会被发送。浏览器自行携带该字段。</li>
+<li>Access-Control-Request-Method //该首部字段用于预检请求。其作用是，将实际请求所使用的 HTTP 方法告诉服务器。浏览器自行携带该字段。</li>
+<li>Access-Control-Request-Headers  //该首部字段用于预检请求。其作用是，将实际请求所携带的首部字段告诉服务器。浏览器自行携带该字段。</li>
+<li>Access-Control-Allow-Origin   //表示服务器允许哪些域可以访问该资源，配置在服务端。</li>
+<li>Access-Control-Allow-Methods  //表示服务器所允许的实际请求中使用的HTTP方法，配置在服务端。</li>
+<li>Access-Control-Allow-Headers  //该首部字段用于预检请求的响应。指明了实际请求中允许携带的首部字段，配置在服务端。</li>
+<li>Access-Control-Max-Age   //该首部字段用于预检请求的响应，指定了预检请求能够被缓存多久，配置在服务端。</li>
+<li>Access-Control-Allow-Credentials  //表示是否允许发送Cookie，配置在服务端。</li>
+<li>Access-Control-Expose-Headers  //表示如果想拿到其他字段，就必须在Access-Control-Expose-Headers里面指定。</li>
+</ul>
+<h2 id="CORS的两种请求"><a href="#CORS的两种请求" class="headerlink" title="CORS的两种请求"></a>CORS的两种请求</h2><p>浏览器将CORS请求分成两类：简单请求（simple request）和非简单请求（not-so-simple request）。简单请求不会触发CORS预检请求。相反，非简单请求则会触发预检请求。就是我们所说的二次请求。</p>
+<h3 id="简单请求"><a href="#简单请求" class="headerlink" title="简单请求"></a>简单请求</h3><p>（1)  请求方法是以下三种方法之一：</p>
+<pre><code>HEAD
+GET
+POST
+</code></pre><p>（2）HTTP的头信息不超出以下几种字段：</p>
+<pre><code>Accept
+Accept-Language
+Content-Language
+Last-Event-ID
+Content-Type：只限于三个值application/x-www-form-urlencoded、multipart/form-data、text/plain
+</code></pre><p>同时满足以上两种条件的即为简单请求。<br>对于简单请求，浏览器直接发出CORS请求。具体来说，就是在头信息之中，增加一个Origin字段（跨域的时候get，post都会显示origin，同域的时候get不显示origin，post显示origin）。<img src="20190331123346879.png" alt=""><br>上面的头信息中，Origin 字段用来说明，本次请求来自哪个源。服务器根据这个值，决定是否同意这次请求。如果 Origin 指定的源，不在许可范围内，服务器会返回一个正常的HTTP回应。浏览器发现，这个回应的头信息没有包含Access-Control-Allow-Origin字段，就知道出错了，从而抛出一个错误，No ‘Access-Control-Allow-Origin’ header is present on the requested resource。被XMLHttpRequest的onerror回调函数捕获。</p>
+<p>后台添加注解支持跨域请求<br>在类上<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@CrossOrigin(origins = &quot;http://api.bob.com&quot;, maxAge = 3600)</span><br><span class="line">@RestController</span><br><span class="line">@RequestMapping(&quot;/account&quot;)</span><br><span class="line">public class AccountController &#123;</span><br><span class="line">      // ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在方法上<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@CrossOrigin(origins = &quot;http://api.bob.com&quot;)</span><br><span class="line">@GetMapping(&quot;/&#123;id&#125;&quot;)</span><br><span class="line">public Account retrieve(@PathVariable Long id) &#123;</span><br><span class="line">       // ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>添加注解后，服务器返回的响应，会多出几个头信息字段。<br><img src="20190331123832323.png" alt=""></p>
+<h3 id="非简单请求"><a href="#非简单请求" class="headerlink" title="非简单请求"></a>非简单请求</h3><p>非简单请求，比如请求方法是PUT或DELETE，或者Content-Type字段的类型是application/json，或者加了自定义头部信息的请求。非简单请求会发送两次请求，第一成为预检请求，第二次才是正常的跨域请求。</p>
+<h4 id="1-预检请求"><a href="#1-预检请求" class="headerlink" title="1.预检请求"></a>1.预检请求</h4><p>非简单请求的CORS请求，会在正式通信之前，增加一次HTTP查询请求，称为”预检”请求（preflight）。浏览器先询问服务器，当前网页所在的域名是否在服务器的许可名单之中，以及可以使用哪些HTTP动词和头信息字段。只有得到肯定答复，浏览器才会发出正式的XMLHttpRequest请求，否则就报错。<br><img src="20190331140523976.png" alt=""><br>上面代码中，HTTP请求的方法是PUT，并且发送一个自定义头信息X-Custom-Header。浏览器发现，这是一个非简单请求，就自动发出一个”预检”请求，要求服务器确认可以这样请求。”预检”请求用的请求方法是OPTIONS，表示这个请求是用来询问的。除了Origin字段，”预检”请求的头信息包括两个特殊字段。</p>
+<p>（1）Access-Control-Request-Method</p>
+<p>该字段是必须的，用来列出浏览器的CORS请求会用到哪些HTTP方法，上例是PUT。</p>
+<p>（2）Access-Control-Request-Headers</p>
+<p>该字段是一个逗号分隔的字符串，指定浏览器CORS请求会额外发送的头信息字段，上例是X-Custom-Header。</p>
+<h4 id="2-预检请求的回应"><a href="#2-预检请求的回应" class="headerlink" title="2.预检请求的回应"></a>2.预检请求的回应</h4><p>服务器收到”预检”请求以后，检查了Origin、Access-Control-Request-Method和Access-Control-Request-Headers字段以后，确认允许跨源请求，就可以做出回应。</p>
+<p>后台可以增加一个过滤器，过滤所有的预检请求<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException &#123;</span><br><span class="line"> </span><br><span class="line">        HttpServletRequest request = (HttpServletRequest) servletRequest;</span><br><span class="line">        HttpServletResponse response =(HttpServletResponse)servletResponse;</span><br><span class="line">        String token = request.getHeader(&quot;access_token&quot;);</span><br><span class="line">        System.out.println(&quot;filter access_token:&quot;+token);</span><br><span class="line"> </span><br><span class="line">        //预检请求</span><br><span class="line">        if (&quot;OPTIONS&quot;.equals(request.getMethod()))&#123;</span><br><span class="line">            response.setHeader(&quot;Access-Control-Allow-Origin&quot;,&quot;*&quot;);</span><br><span class="line">            response.setHeader(&quot;Access-Control-Allow-Credentials&quot;,&quot;true&quot;);</span><br><span class="line">            response.setHeader(&quot;Access-Control-Allow-Methods&quot;,&quot;POST, GET, OPTIONS, DELETE, PUT, PATCH&quot;);</span><br><span class="line">            response.setHeader(&quot;Access-Control-Allow-Headers&quot;,&quot;Origin, No-Cache, X-Requested-With, If-Modified-Since, Pragma, Last-Modified, Cache-Control, Expires, Content-Type,Authorization,X-Custom-Header&quot;);</span><br><span class="line"> </span><br><span class="line">            response.setHeader(&quot;Access-Control-Max-Age&quot;,&quot;3600&quot;);</span><br><span class="line">            response.setStatus(HttpStatus.OK.value());</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        filterChain.doFilter(servletRequest, servletResponse);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>下面是通过预检请求的回应。<br><img src="20190331141036158.png" alt=""><br>如果预检请求没有通过，会触发一个错误，被XMLHttpRequest对象的onerror回调函数捕获。控制台会打印出如下的报错信息。<br><img src="20190331141656643.png" alt=""></p>
+<h4 id="3-第二次请求和回应"><a href="#3-第二次请求和回应" class="headerlink" title="3.第二次请求和回应"></a>3.第二次请求和回应</h4><p>一旦服务器通过了”预检”请求，以后每次浏览器正常的CORS请求，就都跟简单请求一样，会有一个Origin头信息字段。服务器的回应，也都会有一个Access-Control-Allow-Origin头信息字段。</p>
+<p>第二次请求<br><img src="20190331141605170.png" alt=""></p>
+<p>请求的正确回应<br><img src="20190331141831591.png" alt=""></p>
+
       
-    </p></div>
+    </div>
 
     
 
@@ -568,211 +600,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/生活/2019-new-year/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="coding.dong">
-      <meta itemprop="description" content="如果你发现生活不如意，我希望你有勇气重来">
-      <meta itemprop="image" content="/images/me.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="coding.dong'blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/生活/2019-new-year/" class="post-title-link" itemprop="http://yoursite.com/index.html">写在新年</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-12-31 21:37:55" itemprop="dateCreated datePublished" datetime="2018-12-31T21:37:55+08:00">2018-12-31</time>
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/生活/" itemprop="url" rel="index"><span itemprop="name">生活</span></a></span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/跨域/" rel="tag"># 跨域</a>
           
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/生活/2019-new-year/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/生活/2019-new-year/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/生活/2019-new-year/" class="leancloud_visitors" data-flag-title="写在新年">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数：</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+      
 
       
       
-        <div class="post-gallery" itemscope="" itemtype="http://schema.org/ImageGallery">
-          
-          
-            <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="https://blog-image-1258491052.cos.ap-shanghai.myqcloud.com/github_blog/Snipaste_2019-01-10_21-14-44.png" rel="gallery_cjtwlfx1n000ad0wa8t4my7h6" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="https://blog-image-1258491052.cos.ap-shanghai.myqcloud.com/github_blog/Snipaste_2019-01-10_21-14-44.png" itemprop="contentUrl">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/生活/2019-new-year/" rel="next" title="写在新年">
+                <i class="fa fa-chevron-left"></i> 写在新年
               </a>
             
-          
+          </div>
 
-          
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
           </div>
         </div>
       
 
       
-        
-          <p>今天是2018年最后一天的日子。下午和老同学一起吃了个火锅，很舒服~。毕竟冬天与火锅更配哦！吃完饭看着外滩的人山人海，我们一致决定回去休息，就不凑这个热闹了，哈哈。。
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/生活/2019-new-year/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-         
-          <!--/noindex-->
-        
-      
-    </p></div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-       
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -782,197 +639,19 @@
   </article>
 
 
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Hexo/2019-hexo/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="coding.dong">
-      <meta itemprop="description" content="如果你发现生活不如意，我希望你有勇气重来">
-      <meta itemprop="image" content="/images/me.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="coding.dong'blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/Hexo/2019-hexo/" class="post-title-link" itemprop="http://yoursite.com/index.html">使用Hexo+GitHup搭建个人博客</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-12-31 17:48:48" itemprop="dateCreated datePublished" datetime="2018-12-31T17:48:48+08:00">2018-12-31</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/Hexo/2019-hexo/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Hexo/2019-hexo/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/Hexo/2019-hexo/" class="leancloud_visitors" data-flag-title="使用Hexo+GitHup搭建个人博客">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数：</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>其实一直以来都有个想法，就是写个自己的博客网站，用来记录一些平时累积的技术和生活中的零碎想法。偶然间发现了一个好用的博客生成插件–Hexo。
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/Hexo/2019-hexo/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-         
-          <!--/noindex-->
-        
-      
-    </p></div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-       
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
 
         </div>
         
@@ -993,8 +672,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -1132,6 +820,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是跨域请求"><span class="nav-number">1.</span> <span class="nav-text">什么是跨域请求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浏览器对跨域做出的限制"><span class="nav-number">2.</span> <span class="nav-text">浏览器对跨域做出的限制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#跨域解决方法"><span class="nav-number">3.</span> <span class="nav-text">跨域解决方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#跨域资源共享CORS"><span class="nav-number">4.</span> <span class="nav-text">跨域资源共享CORS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CORS的两种请求"><span class="nav-number">5.</span> <span class="nav-text">CORS的两种请求</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简单请求"><span class="nav-number">5.1.</span> <span class="nav-text">简单请求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#非简单请求"><span class="nav-number">5.2.</span> <span class="nav-text">非简单请求</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-预检请求"><span class="nav-number">5.2.1.</span> <span class="nav-text">1.预检请求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-预检请求的回应"><span class="nav-number">5.2.2.</span> <span class="nav-text">2.预检请求的回应</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-第二次请求和回应"><span class="nav-number">5.2.3.</span> <span class="nav-text">3.第二次请求和回应</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -1268,6 +972,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.6.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.6.0"></script>
+
+
 
   
 
@@ -1669,14 +1377,6 @@
   
 
   
-  
-    
-      
-    
-      
-    
-      
-    
   
 
   
