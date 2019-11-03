@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-31T07:58:50.157Z</updated>
+  <updated>2019-11-03T06:09:41.245Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,9 +17,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>JDK各版本的新特性</title>
+    <link href="http://yoursite.com/%E6%8A%80%E6%9C%AF/2019-4-java-editon/"/>
+    <id>http://yoursite.com/技术/2019-4-java-editon/</id>
+    <published>2019-11-03T04:51:55.000Z</published>
+    <updated>2019-11-03T06:09:41.245Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;好久没有更新微博了，话说今年经历的事情其实还是蛮多的。换了个新公司，然后又重新租了房子，相当于搬了一次家！新公司的工作还是蛮紧张的，很多业务还不熟，其实这都不应该成为我懒惰的理由~ 还是继续码字吧！嗯，码字使我快乐~
+    
+    </summary>
+    
+      <category term="技术" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="JDK" scheme="http://yoursite.com/tags/JDK/"/>
+    
+      <category term="新特性" scheme="http://yoursite.com/tags/%E6%96%B0%E7%89%B9%E6%80%A7/"/>
+    
+  </entry>
+  
+  <entry>
     <title>说说浏览器的跨域问题</title>
-    <link href="http://yoursite.com/%E6%8A%80%E6%9C%AF/2019-cors/"/>
-    <id>http://yoursite.com/技术/2019-cors/</id>
+    <link href="http://yoursite.com/%E6%8A%80%E6%9C%AF/2019-1-cors/"/>
+    <id>http://yoursite.com/技术/2019-1-cors/</id>
     <published>2019-03-31T07:04:33.000Z</published>
     <updated>2019-03-31T07:58:50.157Z</updated>
     
@@ -38,8 +60,8 @@
   
   <entry>
     <title>写在新年</title>
-    <link href="http://yoursite.com/%E7%94%9F%E6%B4%BB/2019-new-year/"/>
-    <id>http://yoursite.com/生活/2019-new-year/</id>
+    <link href="http://yoursite.com/%E7%94%9F%E6%B4%BB/2019-3-new-year/"/>
+    <id>http://yoursite.com/生活/2019-3-new-year/</id>
     <published>2018-12-31T13:37:55.000Z</published>
     <updated>2019-01-10T13:16:53.206Z</updated>
     
@@ -60,8 +82,8 @@
   
   <entry>
     <title>使用Hexo+GitHup搭建个人博客</title>
-    <link href="http://yoursite.com/Hexo/2019-hexo/"/>
-    <id>http://yoursite.com/Hexo/2019-hexo/</id>
+    <link href="http://yoursite.com/Hexo/2019-2-hexo/"/>
+    <id>http://yoursite.com/Hexo/2019-2-hexo/</id>
     <published>2018-12-31T09:48:48.000Z</published>
     <updated>2019-01-06T11:42:32.684Z</updated>
     
